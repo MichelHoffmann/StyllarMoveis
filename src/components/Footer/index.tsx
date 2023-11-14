@@ -18,16 +18,18 @@ export function Footer() {
           R. Joaquim Macedo,711 - São Francisco
         </p>
       </div>
-      <div className="pl-5 mt-5 mb-5">
+      <div className="pl-5 mt-5 mb-5 md:pl-20 lg:flex lg:flex-col lg:justify-center lg:items-center">
         <h3 className="text-red text-base mb-3">Redes Sociais</h3>
-        <p className="flex gap-1 items-center mb-2">
-          <img src={Insta} alt="" />
-          @styllarmoveis
-        </p>
-        <p className="flex gap-1 items-center">
-          <img src={Face} alt="" />
-          Styllar Móveis Planejados III
-        </p>
+        <div className="md:flex gap-4 items-center">
+          <p className="flex gap-1 items-center mb-2 md:mb-0 lg:mb-0">
+            <img src={Insta} alt="" />
+            @styllarmoveis
+          </p>
+          <p className="flex gap-1 items-center">
+            <img src={Face} alt="" />
+            Styllar Móveis Planejados III
+          </p>
+        </div>
       </div>
       <div className="h-12 bg-gray flex items-center justify-center">
         <p className="text-white">Desenvolvido com ❤ por Michel Hoffmann</p>
