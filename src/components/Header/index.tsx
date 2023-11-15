@@ -2,17 +2,20 @@ import Logo from "../../../public/styllar-logo.svg";
 import MenuButton from "../../../public/menu-button.svg";
 import BtDelete from "../../../public/bt-delete.svg";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Header() {
-  const [menu, setMenu] = useState(false)
+  const [menu, setMenu] = useState(false);
   function ChangeMenu() {
-    setMenu(!menu)
-    console.log(menu)
+    setMenu(!menu);
+    console.log(menu);
   }
 
   return (
     <header className="h-50px flex place-content-between px-5 bg-pink md:px-8">
-      <img src={Logo} alt="" className="hover:cursor-pointer" />
+      <Link to="/">
+        <img src={Logo} alt="" className="hover:cursor-pointer" onClick={ChangeMenu}/>
+      </Link>
       <img
         src={MenuButton}
         alt=""
@@ -35,15 +38,9 @@ export function Header() {
           />
         </div>
         <div className="h-full text-white flex flex-col justify-center items-center gap-8">
-          <a href="#" className="font-bold text-1.5rem">
-            Quarto
-          </a>
-          <a href="#" className="font-bold text-1.5rem">
-            Sala
-          </a>
-          <a href="#" className="font-bold text-1.5rem">
-            Cozinha
-          </a>
+          <Link to='/quarto' onClick={ChangeMenu} className="font-bold text-1.5rem">Quarto</Link>
+          <Link to='/sala' onClick={ChangeMenu} className="font-bold text-1.5rem">Sala</Link>
+          <Link to='/cozinha' onClick={ChangeMenu} className="font-bold text-1.5rem">Cozinha</Link>
         </div>
       </div>
     </header>
