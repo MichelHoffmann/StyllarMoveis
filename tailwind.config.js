@@ -25,6 +25,7 @@ export default {
         "251px": "251px",
         "260px": "260px",
         "300px": "300px",
+        "400px": "400px",
       },
       spacing: {
         "60px": "60px",
